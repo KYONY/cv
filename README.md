@@ -11,7 +11,7 @@ A modern, responsive CV website with dark/light theme support.
 
 ## 🚀 Demo
 
-You can view the live demo here: [https://github.com/KYONY/cv]  
+You can view the live demo here: [[Personal CV Website](https://kyony.github.io/cv/)]  
 
 ## 📁 Project Structure
 
