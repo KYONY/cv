@@ -260,6 +260,7 @@ body {
     }
 
     .section {
+        padding-top: 0.2rem;
     }
 
     /* Contact section */
