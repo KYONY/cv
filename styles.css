@@ -1,0 +1,341 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --background-color: #f5f6fa;
+    --card-background: white;
+    --card-border: none;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --skill-text: white;
+}
+
+[data-theme="dark"] {
+    --primary-color: #61dafb;
+    --secondary-color: #4fa3d1;
+    --text-color: #e1e1e1;
+    --background-color: #1a1a1a;
+    --card-background: #2d2d2d;
+    --card-border: 1px solid #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --skill-text: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    background: var(--card-background);
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    /*padding: 1rem;*/
+    /*border-radius: 10px;*/
+    /*margin-bottom: 1rem;*/
+    /*box-shadow: 0 2px 15px var(--shadow-color);*/
+    /*border: var(--card-border);*/
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Profile header */
+.profile-info {
+    text-align: right;
+    /*margin-bottom: 0.3rem;*/
+}
+
+.profile-info h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    /*margin-bottom: 0.5rem;*/
+}
+
+.profile-info p {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+/* Skills section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+    padding-bottom: 1rem;
+}
+
+.skill-tag {
+    background: var(--secondary-color);
+    color: var(--skill-text);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+}
+
+/* Experience section */
+.experience-item {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item strong {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item li {
+    margin-bottom: 0.5rem;
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: row; /* Горизонтальне розташування для веб */
+    flex-wrap: nowrap; /* Не переносити на новий рядок */
+    gap: 2rem; /* Більший відступ між елементами для веб */
+    align-items: center; /* Центрування по вертикалі */
+}
+
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+[data-theme="dark"] .contact-item a {
+    color: var(--primary-color);
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/*  experience-info  */
+.experience-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.experience-info .label {
+    min-width: 70px;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.experience-info p {
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
+/* Стилі для інформації про компанію */
+.position {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-line {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.period {
+    color: var(--text-color);
+}
+
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: var(--card-background);
+    color: var(--text-color);
+    border: var(--card-border);
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    z-index: 1000;
+}
+
+/* PDF print button */
+.print-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    background: var(--secondary-color);
+    color: var(--skill-text);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.print-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .section {
+    }
+
+    /* Contact section */
+    .contact-info {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        gap: 0.3rem !important; /* Controls space between items */
+        margin-bottom: 0.3rem; /* Reduces bottom margin of the contact section */
+    }
+
+    .contact-item {
+        gap: 0.3rem; /* Space between icon and text */
+        font-size: 0.9rem;
+        margin-right: 0.5rem; /* Additional right margin between items */
+        white-space: nowrap; /* Prevents text wrapping within items */
+    }
+
+     /* Прибираємо межу з останнього елемента попереднього досвіду */
+    .experience-item {
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Примусовий розрив сторінки перед Junior позицією */
+    .page-break-before {
+        page-break-before: always !important;
+        break-before: always !important;
+    }
+
+    /*Skills section*/
+    .skills {
+        gap: 0.2rem !important;
+        line-height: 1;
+        margin-bottom: 0.2rem;
+    }
+
+    .skill-tag {
+        gap: 0.3rem;
+        margin-right: 0.1rem;
+        padding: 0.1rem 0.1rem;
+        font-size: 0.9rem;
+    }
+
+
+    /*.experience-info {*/
+    .experience-info {
+        gap: 0.3rem;
+    }
+
+    .experience-info .label {
+        min-width: 60px;
+    }
+
+    .print-button, .theme-toggle {
+        display: none;
+    }
+
+    @page {
+        margin: 0.3cm;
+        size: A4;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+    }
+}
