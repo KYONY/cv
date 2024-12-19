@@ -45,11 +45,6 @@ body {
     padding-left: 1rem;
     padding-top: 1rem;
     padding-right: 1rem;
-    /*padding: 1rem;*/
-    /*border-radius: 10px;*/
-    /*margin-bottom: 1rem;*/
-    /*box-shadow: 0 2px 15px var(--shadow-color);*/
-    /*border: var(--card-border);*/
 }
 
 .section h2 {
@@ -69,7 +64,6 @@ body {
 .profile-info h1 {
     color: var(--primary-color);
     font-size: 2rem;
-    /*margin-bottom: 0.5rem;*/
 }
 
 .profile-info p {
@@ -136,22 +130,19 @@ body {
     margin-bottom: 0.5rem;
 }
 
-
 .contact-info {
     display: flex;
-    flex-direction: row; /* Горизонтальне розташування для веб */
-    flex-wrap: nowrap; /* Не переносити на новий рядок */
-    gap: 2rem; /* Більший відступ між елементами для веб */
-    align-items: center; /* Центрування по вертикалі */
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 2rem; 
+    align-items: center; 
 }
-
-
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    white-space: nowrap; /* Запобігає переносу тексту */
+    white-space: nowrap; 
 }
 
 .contact-item a {
@@ -188,7 +179,7 @@ body {
     text-align: left;
     flex: 1;
 }
-/* Стилі для інформації про компанію */
+
 .position {
     color: var(--secondary-color);
     font-size: 1.3rem;
@@ -267,7 +258,7 @@ body {
     .contact-info {
         flex-direction: row !important;
         justify-content: flex-start !important;
-        gap: 0.3rem !important; /* Controls space between items */
+        gap: 0.2rem !important; /* Controls space between items */
         margin-bottom: 0.3rem; /* Reduces bottom margin of the contact section */
     }
 
@@ -278,14 +269,12 @@ body {
         white-space: nowrap; /* Prevents text wrapping within items */
     }
 
-     /* Прибираємо межу з останнього елемента попереднього досвіду */
     .experience-item {
         border-bottom: none !important;
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
     }
 
-    /* Примусовий розрив сторінки перед Junior позицією */
     .page-break-before {
         page-break-before: always !important;
         break-before: always !important;
