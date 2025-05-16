@@ -279,6 +279,21 @@ body {
         page-break-before: always !important;
         break-before: always !important;
     }
+    
+    .keep-together {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+    }
+    
+    .experience-info p {
+           orphans: 3 !important; 
+           widows: 3 !important;  
+    }
+    
+    .section:has(h2:contains("Professional Experience")) .experience-item .experience-info:last-child {
+            page-break-after: auto !important;
+            break-after: auto !important;
+    }
 
     /*Skills section*/
     .skills {
